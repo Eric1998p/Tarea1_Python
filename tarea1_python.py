@@ -38,9 +38,13 @@ declarar una variable.
 
 coche = "eléctrico"
 
+print(coche)
+
 #Ejemplo de constante
 
 #Importaré una biblioteca para mandar a llamar a la constante pi
 import numpy as np
 
 PI = np.pi
+
+print(PI)
