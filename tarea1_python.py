@@ -97,73 +97,36 @@ print(bool1, type(bool1))
 none1 = None
 print(none1, type(none1))
 
-#Los datos de tipo bytes (bytes) son secuencias de valores de bytes,
+#Los datos de tipo bytes (bytes) son secuencias de valores de bytes inmutables,
 #pueden ser utilizados para representar datos binarios como imágenes, archivos, etc.
+#Un byte es una unidad de almacenamiento de datos que equivale a 8 bits. Los 
+#bytes son la unidad básica de información utilizada en la mayoría de las 
+#arquitecturas de computadoras modernas y en sistemas de comunicación digital. 
+#Un byte tiene 8 bits. Dado que cada bit puede tener un valor de 0 o 1, un byte 
+#puede representar 256 valores diferentes (de 0 a 255)
 
+bin1 = b'Hola, mundo!'
+print(bin1, type(bin1))
 
+#Los datos de tipo bytearray (bytearray) son secuencias de bytes mutables.
 
+bytearray1 = bytearray([65, 66, 100])
+bytearray2 = bytearray("¡Hola, mundo!", 'utf-8')
+print(bytearray1, type(bytearray1))
+print(bytearray2, type(bytearray2))
 
-
-
+#Un memoryview permite acceder y manipular datos sin copiarlos, muy útil para 
+#manejar grandes cantidades de datos o para trabajar con subconjuntos de datos 
+#de manera eficiente.
 
 
 
 """
-Numéricos
-Enteros (int): Representan números enteros, tanto positivos como negativos, sin parte decimal.
-python
-Copiar código
-x = 10
-y = -5
-Flotantes (float): Representan números con parte decimal.
-python
-Copiar código
-pi = 3.14159
-e = 2.718
-Números complejos (complex): Representan números complejos en la forma a + bj, donde a es la parte real y b es la parte imaginaria.
-python
-Copiar código
-z = 2 + 3j
-Tipos de Datos de Secuencia
-Cadenas de caracteres (str): Secuencias de caracteres, tanto letras como dígitos y otros símbolos.
-python
-Copiar código
-nombre = "Juan"
-saludo = 'Hola'
-Tipos de Datos Booleanos
-Booleanos (bool): Representan valores de verdad, pueden ser True o False.
-python
-Copiar código
-es_mayor = True
-es_menor = False
-Tipo de Datos Especial
-NoneType: Representa la ausencia de un valor.
-python
-Copiar código
-valor_nulo = None
-Tipos de Datos Binarios
-bytes: Secuencia de enteros en el rango de 0 a 255.
-python
-Copiar código
-b = b'Hola'
-bytearray: Similar a bytes, pero mutable.
-python
-Copiar código
-ba = bytearray([65, 66, 67])
+
 memoryview: Permite acceder a los datos internos de un objeto bytes sin copiarlos.
 python
 Copiar código
 mv = memoryview(b'Hola')
-Resumen de los Tipos de Datos Primitivos en Python
-int: Enteros, como 10 o -5.
-float: Números de punto flotante, como 3.14159 o 2.718.
-complex: Números complejos, como 2 + 3j.
-str: Cadenas de caracteres, como "Hola" o 'Mundo'.
-bool: Valores booleanos, True o False.
-NoneType: El tipo del valor None, que representa la ausencia de un valor.
-bytes: Secuencias inmutables de enteros en el rango de 0 a 255.
-bytearray: Secuencias mutables de enteros en el rango de 0 a 255.
-memoryview: Permite el acceso a los datos del buffer subyacente sin copiarlos.
 """
 
 
