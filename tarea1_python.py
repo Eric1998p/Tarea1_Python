@@ -120,17 +120,218 @@ print(bytearray2, type(bytearray2))
 #de manera eficiente.
 
 
+# Crear un memoryview a partir del objeto bytes
+memoryview1 = memoryview(bin1)
+print(memoryview1, type(memoryview1))
 
-"""
+print("¡Hola, Python!")
 
-memoryview: Permite acceder a los datos internos de un objeto bytes sin copiarlos.
-python
-Copiar código
-mv = memoryview(b'Hola')
-"""
+#Operadores aritméticos: se utilizan para realizar operaciones matemáticas
+#básicas. Estas operaciones son
+
+#Suma +
+
+x = 5
+y = 10
+sum = x + y
+print("Suma: {}".format(sum))
+
+#Resta -
+
+x = 5
+y = 10
+substraction = x - y
+print("Resta: {}".format(substraction))
+
+#Multiplicación *
+
+x = 5
+y = 10
+multiplication = x * y
+print("Multiplicación: {}".format(multiplication))
+
+#División /
+
+x = 5
+y = 10
+division = x / y
+print("División: {}".format(division))
+
+#Exponenciación y raiz ** (la raiz es elevar un número a una potencia fraccionaria)
+
+x = 4
+y = 2
+exponent = x ** y
+
+raiz = x**(1/y)
+print("Exponenciación: {}".format(exponent))
+print("Raiz: {}".format(raiz))
+
+#Módulo % (nos devuelve el residuo de la división de dos números)
+
+x = 5
+y = 10
+modulo = x % y
+print("Módulo: {}".format(modulo))
+
+#División entera // (consiste en dividir un número entero entre otro
+#y obtener el cociente entero, descartando el residuo)
+
+x = 15
+y = 10
+division_entera = x // y
+print("División Entera: {}".format(division_entera))
+
+#Operadores de asignación: asignan valores a las variables
+
+#Asignación = 
+
+x = 5
+print(x)
+
+#Asignación de adición +=
+#Es equivalente a x = x + 5
+
+x = 5
+x += 5
+print(x)
+
+#Asignación de sustracción -=
+#Es equivalente a x = x - 5
+
+x = 5
+x -= 5
+print(x)
+
+#Asignación de multiplicación *=
+#Es equivalente a x = x * 5
+x = 5
+x *= 5
+print(x)
+
+#Asignación de división /=
+#Es equivalente a x = x / 5
+
+x = 5
+x /= 5
+print(x)
+
+#Asignación de exponenciación (y raiz) **=
+#Es equivalente a x = x **2
+
+
+x = 4
+x **= 2
+print(x)
+
+#Asignación de módulo %=
+#Es equivalente a x = x % 5
+
+x = 5
+x %= 5
+print(x)
+
+#Asignación de división entera //=
+#Es equivalente a x = x // 10
+
+x = 15
+x //= 10
+print(x)
+
+#Los operadores de asignación de AND bit a bit &= combinan una 
+#operación bit a bit con una asignación en una sola expresión. Estos operadores 
+#permiten modificar el valor de una variable aplicando una operación bit a bit 
+#con otro valor y luego asignar el resultado de vuelta a la misma variable
+#5 en binario es 101 y 3 en binario es 011, por lo que al aplicar & obtenemos
+#001 ya que es 1 en ambos solo en el primer dígito. Como 001 es equivalente a 1,
+#entonces 1 es el resultado.
+#Es equivalente a x = x & 3
+
+x = 5
+x &= 3
+print(x)
+
+#Operadores de asignación de OR bit a bit |=
+#Es equivalente a x = x | 4
+
+x = 5
+x |= 4
+print(x)
+
+#Operadores de asignación de XOR bit a bit ^=
+#Es equivalente a x = x ^ 3
+
+x = 5
+x ^= 4
+print(x)
+
+#Asignación de desplazamiento a la izquierda <<=
+#Es equivalente a x = x << 3
+#El operador de desplazamiento a la izquierda mueve los bits de un número 
+#hacia la izquierda por un número específico de posiciones. Los bits 
+#desplazados hacia la izquierda se llenan con ceros.
+
+x = 5
+x <<= 1
+print(x)
+
+#Asignación de desplazamiento a la derecha
+#Es equivalente a x = x >> 3
+
+x = 5
+x >>= 1
+print(x)
+
+#Operadores de comparación: se utilizan para comparar dos valores
+
+#Igual a ==
+
+x = 5
+y = 5
+print(x == y)
+
+#No igual a != 
+
+x = 5
+y = 6
+print(x!= y)
+
+#Menor que <
+
+x = 5
+y = 10
+print(x < y)
+
+#Mayor que >
+
+x = 10
+y = 5
+print(x > y)
+
+#Menor o igual que <=
+
+x = 5
+y = 10
+print(x <= y)
+
+#Mayor o igual que >=
+
+#Menor o igual que <=
+
+x = 10
+y = 5
+print(x >= y)
+
+#Operadores lógicos: se utilizan para combinar expresiones booleanas
+
+
 
 
 
 
 #Como adicional, voy a poner estructuras de datos como list, tuplas, diccionarios
 #conjuntos, range, etc.
+#-ya después agrego ejemplos de bytes con imágenes y así
+
+###Al final revisar de nuevo las instrucciones.
+
