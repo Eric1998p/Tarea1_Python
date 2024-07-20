@@ -535,7 +535,7 @@ finally:
 
 #raise
 
-if x > 0:
+if x < 0:
     raise ValueError("El valor no puede ser negativo")
 
 #assert
@@ -543,6 +543,32 @@ if x > 0:
 #AssertionError
 
 assert x > 0, "x debe ser positivo"
+
+#Otra Estructura de Control
+
+#with
+#Gestiona contextos de recursos, asegurando que se cierren correctamente
+#después de su uso. Esto es crucial en situaciones donde se deben manejar 
+#recursos que requieren apertura y cierre explícitos, como archivos, 
+#conexiones a bases de datos, y otros recursos que deben ser liberados después
+#de su uso para evitar pérdidas de memoria o bloqueos de recursos.
+
+with open("with.txt", "r") as archivo:
+    contenido = archivo.read()
+    print(contenido)
+
+
+#Ahora, crearé un programa que imprima todos lo números del 10 al 100, excepto
+#el 66 ni múltiplos de 3
+
+for i in range(0,100+1):
+    #Está de más poner la condición del 66, puesto que es múltiplo de 3,
+    #pero aún así la pondré.
+    if i == 66 or i % 3 == 0:
+        continue
+    print(i)
+
+
 
 
 
