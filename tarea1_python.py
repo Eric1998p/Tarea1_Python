@@ -568,6 +568,89 @@ for i in range(0,100+1):
         continue
     print(i)
 
+#A continuación, el programa que me dice cuántos días faltan para día 
+#de muertos y navidad.
+#Voy a utilizar la librería pandas para utilizar Timestamp (de seguro hay
+#muchas formas de hacerlo, pero ésta es la que conozco, y es muy buena).
+
+import pandas as pd
+
+texto = """
+Ingresa la fecha en formato yyyy-mm-dd y te diré cuántos días faltan para
+día de muertos y navidad. (ejemplo: 1998-01-25). Si quieres más presición,
+utiliza el formato yyyy-mm-dd HH:MM:SS (ejemplo: 1998-01-25 10:09:30)
+"""
+
+entrada = input(texto)
+
+christmas = pd.Timestamp("2024-12-25")
+
+dia_muertos = pd.Timestamp("2024-11-02")
+
+faltan_muertos = dia_muertos - pd.Timestamp(entrada)
+
+faltan_christmas = christmas - pd.Timestamp(entrada)
+
+print("Faltan: ", faltan_muertos)
+print("Faltan: ", faltan_christmas)
+
+
+#A continuación el programa del palíndromo
+
+text = input("Escribe algo y te diré si es palíndromo: ")
+text = text.lower()
+
+#Podría agregarle más signos ortográficos por eliminar, como ñ, diéresis, etc.
+#Por el momento pienso que no está mal así
+replacements = {
+    ' ': '',
+    ',': '',
+    '.': '',
+    '¡': '',
+    '!': '',
+    '¿': '',
+    '?': '',
+    'á': 'a',
+    'é': 'e',
+    'í': 'i',
+    'ó': 'o',
+    'ú': 'u',
+}
+
+for old, new in replacements.items():
+    text = text.replace(old, new)
+
+text_reversed = text[::-1]
+
+counter = 0
+for i, j in zip(text, text_reversed):
+    if i!=j:
+        counter += 1
+        print("No es palíndromo")
+        break
+if counter == 0:
+    print("Es palíndromo")
+
+#Determinar año biciesto
+
+year = int(input("Escribe un año y te diré si es bisiesto: "))
+
+if (year % 4 == 0 and year % 100!= 0) or (year % 400 == 0):
+    print(f"{year} es bisiesto")
+else:
+    print(f"{year} no es bisiesto")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
