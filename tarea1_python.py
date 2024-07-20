@@ -316,16 +316,233 @@ print(x <= y)
 
 #Mayor o igual que >=
 
-#Menor o igual que <=
-
 x = 10
 y = 5
 print(x >= y)
 
-#Operadores lógicos: se utilizan para combinar expresiones booleanas
+#Operadores lógicos and or not: se utilizan para combinar declaraciones
+#condicionales. and devuelve True si ambas expresiones son verdaderas. or 
+#devuelve True si al menos una expresión es verdadera. not invierte el valor
+#de una expresión (si es False, entonces la invierte a True).
 
+#Operador and
 
+bool1 = True
+bool2 = False
+bool3 = True
 
+print(bool1 and bool2, bool1 and bool3)
+
+#Operador or
+
+bool1 = True
+bool2 = False
+bool3 = False
+
+print(bool1 or bool2, bool2 or bool3)
+
+#Operador not
+
+bool1 = True
+
+print(not bool1)
+
+#Operadores de identidad: se utiliza para comprobar si dos 
+#referencias apuntan al mismo objeto en la memoria. En otras palabras, 
+#verifica si las variables comparadas son exactamente el mismo objeto, no 
+#solo si tienen el mismo valor (como en el caso de operadores de comparación).
+
+#Operador is
+
+x = [1, 2, 3]
+y = [1, 2, 3]
+
+print(x is y, x is x)
+
+#Operador is not
+
+x = [1, 2, 3]
+y = [1, 2, 3]
+
+print(x is not y, x is not x)
+
+#operadores de pertenencia: se utilizan para comprobar si una secuencia contiene 
+#un valor específico
+
+#Operador in
+
+x = [1, 2, 3, 4, 5]
+value = 3
+
+print(value in x)
+
+#Operador not in
+
+x = [1, 2, 3, 4, 5]
+value = 6
+
+print(value not in x)
+
+#Operadores AND bit a bit &
+
+x = 5
+y = 3
+
+print(x & y)
+
+#Operadores OR bit a bit |
+
+x = 5
+y = 3
+
+print(x | y)
+
+#Operadores XOR bit a bit ^
+
+x = 5
+y = 3
+
+print(x ^ y)
+
+#Operadores NOT bit a bit ~
+#Este operador invierte todos los bits de un número. En otras palabras, 
+#convierte todos los bits 1 en 0 y viceversa.vPython utiliza el complemento a 
+#dos para representarvnúmeros negativos, por lo que el resultado de ~a es 
+#-(a + 1)
+
+x = 5
+
+print(~x)
+
+#Operadores de desplazamiento a la izquierda <<
+
+x = 5
+
+print(x << 1)
+
+#Operadores de desplazamiento a la derecha >>
+
+x = 5
+
+print(x >> 1)
+
+#Estructuras Condicionales
+#Nos permiten ejecutar bloques de código basados en condiciones.
+
+#if
+#La sentencia if evalúa una condición. Si la condición es True, ejecuta el 
+#bloque de código asociado.
+
+#elif
+#La sentencia elif (abreviatura de "else if") permite verificar múltiples 
+#condiciones si la condición anterior (if o elif) es falsa. Puedes tener 
+#múltiples elif después de una sentencia if.
+
+#else
+#La sentencia else se utiliza para ejecutar un bloque de código si ninguna de 
+#las condiciones anteriores (if o elif) es verdadera. No toma una condición y 
+#es opcional.
+
+#Ejemplo de if, elif y else
+
+x = float(input("Dame un número real: "))
+
+if x > 15:
+    print("x es mayor que 15")
+elif x > 5:
+    print("x es mayor que 5 pero menor o igual a 15")
+else:
+    print("x es menor o igual a 5")
+
+#Otra forma de escribir if-else
+
+x = 10
+mensaje = "x es mayor que 5" if x > 5 else "x es menor o igual a 5"
+print(mensaje)
+
+#pass
+#Es un marcador de posición que no hace nada, usado cuando se requiere una 
+#sintaxis pero no se desea ejecutar ningún código.
+
+if x > 0:
+    pass  # Aquí no pasa nada
+
+#Estructuras Iterativas
+#Permiten ejecutar repetidamente un bloque de código.
+
+#while
+#Ejecuta un bloque de código mientras la condición sea verdadera. Ejemplo:
+
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+
+#for 
+#Itera sobre una secuencia (como una lista, tupla, diccionario, conjunto o 
+#cadena) y ejecuta un bloque de código.
+
+#break
+#Interrumpe la ejecución del bucle. Ejemplo:
+
+for i in range(10):
+    if i == 7:
+        break
+    print("valor " + str(i))
+
+#continue
+#Salta a la siguiente iteración del bucle. Ejemplo:
+
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+
+#else (con bucles)
+
+for i in range(5):
+    print(i)
+else:
+    print("Bucle terminado normalmente")
+
+#Estructuras de Manejo de Excepciones
+#permiten manejar errores y excepciones que pueden ocurrir durante la 
+#ejecución de un programa, permitiendo que el programa continúe su 
+#ejecución en lugar de detenerse cuando ocurre un error.
+
+#try-except-else
+
+try:
+    # Código que puede generar una excepción
+    resultado = 10 / 0
+    #Nombre de la excepción
+except ZeroDivisionError:
+    # Código para manejar la excepción
+    print("No se puede dividir por cero")
+    #El bloque else se ejecuta si no ocurre ninguna excepción.
+else:
+    print("La división fue exitosa")
+
+#try-except-finally
+#El bloque finally se ejecuta siempre, haya o no excepción.
+
+try:
+    resultado = 10 / 0
+except ZeroDivisionError:
+    print("No se puede dividir por cero")
+finally:
+    print("Esta línea siempre se ejecuta")
+
+#raise
+
+if x > 0:
+    raise ValueError("El valor no puede ser negativo")
+
+#assert
+#Prueba si una condición es verdadera, y si no, lanza una excepción 
+#AssertionError
+
+assert x > 0, "x debe ser positivo"
 
 
 
