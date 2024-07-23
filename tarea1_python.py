@@ -561,7 +561,7 @@ with open("with.txt", "r") as archivo:
 #Ahora, crearé un programa que imprima todos lo números del 10 al 100, excepto
 #el 66 ni múltiplos de 3
 
-for i in range(0,100+1):
+for i in range(10,100+1):
     #Está de más poner la condición del 66, puesto que es múltiplo de 3,
     #pero aún así la pondré.
     if i == 66 or i % 3 == 0:
